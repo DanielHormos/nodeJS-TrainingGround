@@ -191,4 +191,10 @@ describe("loops does things over and over", () => {
     }
     assert.equal(numbers.length, 3)
   })
+  it("filter an array - immutable", () => {
+    const numbers = [10, 23, 1, 33, 8, 12]
+
+    const lowNumbers = numbers.filter((x) => x > 10)
+    assert.equal(lowNumbers.length, 3)
+  })
 })
