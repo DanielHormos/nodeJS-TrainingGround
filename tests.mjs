@@ -81,4 +81,22 @@ describe("constants and variables", () => {
     assert.equal(null, isCatAlive);
     isCatAlive = peekIntoTheBox();
   })
+  it("array keep values", () => {
+    const array1 = [1,2,3,4];
+    const array2 = ["Marcus", "Daniel", "Jean"];
+    const array3 = ["Marcus", 49, true];
+  });
+  it("getting elements out of arrays", () => {
+    const names = ["Marcus", "Daniel", "Jean"];
+    const firstElement = names[0];
+    const secondElement = names[1];
+
+    const length = names.length;
+    const lastElement = names[names.length-1];
+
+    assert.equal(firstElement, "Marcus");
+    assert.equal(secondElement, "Daniel");
+    assert.equal(lastElement, "Jean");
+    assert.equal(length, 3);
+  })
 });
