@@ -145,4 +145,13 @@ describe("loops does things over and over", () => {
     assert.equal(names.length, 4);
     assert.equal(names[3], "Artin");
   })
+  it("removing element from array with pop", () => {
+    const names = ["Marcus", "Peter", "Daniel", "Olle"];
+    assert.equal(names.length, 4);
+
+    names.pop();
+
+    assert.equal(names.length, 3);
+    assert.equal(names[3], undefined)
+  })
 })
