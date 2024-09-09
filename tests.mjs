@@ -222,4 +222,39 @@ describe("objects are for building things", () => {
 
     assert.equal(age, 52)
   })
+  it("Person with favorite film titles", () => {
+    const person = {
+      name: "Daniel",
+      favouriteFilms: ["Titanic", "Fast & furious", "The hole"],
+      age: 24
+    }
+
+    assert.equal(person.favouriteFilms[0], "Titanic")
+    assert.equal(person.favouriteFilms[1], "Fast & furious")
+    assert.equal(person.favouriteFilms.length, 3)
+    assert.equal(person.favouriteFilms[person.favouriteFilms.length - 1], "The hole")
+  })
+  it("a person has a list of favourite movies with releaseYears", () => {
+    const person = {
+      name: "Daniel",
+      favouriteMovies: [
+        {
+          title: "Green Book", 
+          releaseYear: 2013
+        },
+        {
+          title: "Gladiators",
+          releaseYear: 2000
+        },
+        {
+          title: "The Godfather",
+          releaseYear: 1972
+        }
+      ]
+    }
+
+    assert.equal(person.favouriteMovies.length, 3)
+    assert.equal(person.favouriteMovies[0].title, "Green Book")
+    assert.equal(person.favouriteMovies[2].releaseYear, 1972)
+  })
 })
