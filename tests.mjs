@@ -154,4 +154,22 @@ describe("loops does things over and over", () => {
     assert.equal(names.length, 3);
     assert.equal(names[3], undefined)
   })
+  it("removing element from the beginning array using slice", () => {
+    const names = ["Marcus", "Daniel", "Ali", "Arvid"]
+    assert.equal(names.length, 4)
+
+    names.splice(names.length - 1, 1)
+
+    assert.equal(names.length, 3)
+    assert.equal(names[3], undefined)
+  })
+  it("removing element from the beginning aray using slice", () => {
+    const names = ["Marcus", "Daniel", "Arvin", "Jean"]
+    assert.equal(names.length, 4)
+
+    names.splice(0 , 1)
+
+    assert.equal(names.length, 3);
+    assert.equal(names[0], "Daniel")
+  })
 })
