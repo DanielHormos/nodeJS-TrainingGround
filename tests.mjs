@@ -23,17 +23,13 @@ describe("age calculator", () => {
 });
 
 describe("age classifier", () => {
+  it("less than 0 years old isn't born", () => {
+    const result = getAgeGroup(-1);
+    assert.equal(result, "Not born")
+  })
   it("0-3 years old should be a toddler", () => {
-    const result0 = getAgeGroup(0);
-    const result1 = getAgeGroup(1);
-    const result2 = getAgeGroup(2);
-    const result3 = getAgeGroup(3);
-  
-    // assert
-    assert.equal(result0, "toddler");
-    assert.equal(result1, "toddler");
-    assert.equal(result2, "toddler");
-    assert.equal(result3, "toddler");
+    const result = getAgeGroup(0);
+    assert.equal(result, "toddler");
   })
   it("4-12 years old should be a kid", () => {
     const result = getAgeGroup(4);

@@ -1,6 +1,7 @@
 export const getAge =  (birthyear, currentYear) => currentYear - birthyear;
 
 export const getAgeGroup = (age) => {
+    if(age < 0)     return "Not born";
     if(age < 4)     return "toddler";
     if(age < 13)    return "kid";
     if(age < 20)    return "teenager";
