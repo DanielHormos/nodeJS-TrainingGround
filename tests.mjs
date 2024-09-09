@@ -1,5 +1,5 @@
 import assert from "assert"
-import { getAge, getAgeGroup, getAgeForPerson, divide} from "./index.mjs"
+import { getAge, getAgeGroup, getAgeForPerson, divide, addWithLog} from "./index.mjs"
 
 describe("age calculator", () => {
   it("someone born 1972 is 50 2022", () => {
@@ -280,5 +280,24 @@ describe("division", () => {
         error.message, "Please.. no division by zero"
       )
     }
+  })
+})
+
+describe("callbacks", () => {
+  it("adding with logger", () => {  
+    const logThis2 = (message) => {
+      console.log(message)
+    } 
+
+    const result = addWithLog(1, 89, logThis2)
+
+    assert.equal(result, 90)
+  })
+  it("adding with inline logger", () => {
+    const result = addWithLog(1, 89, (message) => {
+      console.log(message)
+    })
+
+    assert.equal(result, 90)
   })
 })

@@ -4,6 +4,11 @@ export const getAgeForPerson = (person, currentYear) => currentYear - person.bir
 
 export const divide = (number1, number2) => number1/number2  
 
+export const addWithLog = (number1, number2, logger) => {
+    logger(`About to '${number1} + ${number2}'`)
+    return number1+number2
+}
+
 export const getAgeGroup = (age) => {
     if(age < 0)     return "Not born"
     if(age < 4)     return "toddler"
