@@ -127,4 +127,13 @@ describe("loops does things over and over", () => {
       console.log(`Current element is '${names[i]}'`);
     }
   })
+  it("calling getAge for each age", () => {
+    const currentYear = 2024;
+    const birthYears = [1963, 2005, 1998];
+
+    for(let i = 0; i < birthYears.length; i++){
+      const age = getAge(birthYears[i], currentYear);
+      console.log(`If you are born in ${birthYears[i]} you are ${age} in ${currentYear}`);
+    }
+  })
 })
