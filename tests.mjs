@@ -257,4 +257,15 @@ describe("objects are for building things", () => {
     assert.equal(person.favouriteMovies[0].title, "Green Book")
     assert.equal(person.favouriteMovies[2].releaseYear, 1972)
   })
+  it("Object in a object", () => {
+    const students = {
+      person: [
+        {
+          name: "Daniel",
+          hobbies: ["Gaming", "Sports"]
+        }
+      ]
+    }
+    assert.equal(students.person[0].hobbies[0], "Gaming")
+  })
 })
