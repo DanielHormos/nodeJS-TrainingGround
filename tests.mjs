@@ -136,4 +136,13 @@ describe("loops does things over and over", () => {
       console.log(`If you are born in ${birthYears[i]} you are ${age} in ${currentYear}`);
     }
   })
+  it("adding elements to array with push", () => {
+    const names = ["Marcus", "Daniel", "Ali"];
+    assert.equal(names.length, 3);
+
+    names.push("Artin");
+    console.log(names[3])
+    assert.equal(names.length, 4);
+    assert.equal(names[3], "Artin");
+  })
 })
