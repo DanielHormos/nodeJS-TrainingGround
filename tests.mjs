@@ -1,5 +1,5 @@
 import assert from "assert";
-import { getAge } from "./index.mjs";
+import { getAge, getAgeGroup } from "./index.mjs";
 
 describe("age calculator", () => {
   it("someone born 1972 is 50 2022", () => {
@@ -21,3 +21,14 @@ describe("age calculator", () => {
     assert.equal(result, 24);
   })
 });
+
+describe("age classifier", () => {
+  it("0-3 years old should be a toddler", () => {
+    const result = getAgeGroup(0);
+    assert.equal(result, "toddler");
+  })
+  it("4-12 years old should be a kid");
+  it("13-19 years old should be a teenager");
+  it("20-39 should be a adult");
+  it("above 39 years old ... you are just old")
+})
