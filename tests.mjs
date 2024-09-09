@@ -111,12 +111,20 @@ describe("loops does things over and over", () => {
   });
   it("loop through an array with while", () => {
     let index = 0;
-    const names = ["Marcus", "Daniel", "Jean"];
+    const names = ["Peter", "Pater", "Poter"];
 
     while (index < names.length){
       console.log(`Index is now '${index}'`);
       console.log(`Current element is '${names[index]}'`)
       index ++;
+    }
+  })
+  it("loop through an array with for", () => {
+    const names = ["Marcus", "Daniel", "Jean"];
+
+    for(let i = 0; i < names.length; i++) {
+      console.log(`Current index is '${i}'`);
+      console.log(`Current element is '${names[i]}'`);
     }
   })
 })
