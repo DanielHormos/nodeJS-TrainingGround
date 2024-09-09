@@ -1,6 +1,8 @@
-export const getAge =  (birthYear, currentYear) => currentYear - birthYear;
+export const getAge =  (birthYear, currentYear) => currentYear - birthYear
 
 export const getAgeForPerson = (person, currentYear) => currentYear - person.birth
+
+export const divide = (number1, number2) => number1/number2  
 
 export const getAgeGroup = (age) => {
     if(age < 0)     return "Not born";
@@ -11,4 +13,4 @@ export const getAgeGroup = (age) => {
     if(age === 50)   return "prime";
 
     return "old";
-};
+}

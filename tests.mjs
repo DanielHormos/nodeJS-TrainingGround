@@ -1,5 +1,5 @@
 import assert from "assert";
-import { getAge, getAgeGroup, getAgeForPerson } from "./index.mjs";
+import { getAge, getAgeGroup, getAgeForPerson, divide} from "./index.mjs";
 
 describe("age calculator", () => {
   it("someone born 1972 is 50 2022", () => {
@@ -20,7 +20,7 @@ describe("age calculator", () => {
     const result = getAge(2000, 2024);
     assert.equal(result, 24);
   })
-});
+})
 
 describe("age classifier", () => {
   it("less than 0 years old isn't born", () => {
@@ -53,7 +53,7 @@ describe("age classifier", () => {
     const result = getAgeGroup(50);
     assert.equal(result, "prime")
   })
-});
+})
 
 describe("constants and variables", () => {
   it.skip("You can't change a const variable", () => {
@@ -99,7 +99,7 @@ describe("constants and variables", () => {
     assert.equal(lastElement, "Jean");
     assert.equal(length, 3);
   })
-});
+})
 
 describe("loops does things over and over", () => {
   it("while loops just keeps going ...", () => {
@@ -267,5 +267,18 @@ describe("objects are for building things", () => {
       ]
     }
     assert.equal(students.person[0].hobbies[0], "Gaming")
+  })
+})
+
+describe("division", () => {
+  it("4 divided with 0 should throw error", () => {
+    try{
+      const result = divide(4,0)
+    }catch(error){
+      assert.notEqual(error, undefined)
+      assert.equal(
+        error.message, "Please.. no division by zero"
+      )
+    }
   })
 })
