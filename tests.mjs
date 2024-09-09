@@ -53,4 +53,32 @@ describe("age classifier", () => {
     const result = getAgeGroup(50);
     assert.equal(result, "prime")
   })
-})
+});
+
+describe("constants and variables", () => {
+  it.skip("You can't change a const variable", () => {
+    const aNumber = 1;
+    aNumber = 2;
+  });
+  it("you can change a let variable", () => {
+    let aNumber = 1;
+    aNumber = 2;
+    assert.equal(aNumber, 2);
+  });
+  it("uninitialized variables are undefined", () => {
+    let aNumber;
+
+    assert.equal("undefined", typeof aNumber);
+    assert.equal(undefined, aNumber);
+  })
+  it("null should be used for not set", () => {
+    const peekIntoTheBox = () => {
+      return false;
+    };
+
+    let isCatAlive = null;
+
+    assert.equal(null, isCatAlive);
+    isCatAlive = peekIntoTheBox();
+  })
+});
