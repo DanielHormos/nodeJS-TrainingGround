@@ -100,3 +100,23 @@ describe("constants and variables", () => {
     assert.equal(length, 3);
   })
 });
+
+describe("loops does things over and over", () => {
+  it("while loops just keeps going ...", () => {
+    let counter = 0;
+    while(counter < 2){
+      console.log(`'Counter is now '${counter}`);
+      counter++;
+    }
+  });
+  it("loop through an array with while", () => {
+    let index = 0;
+    const names = ["Marcus", "Daniel", "Jean"];
+
+    while (index < names.length){
+      console.log(`Index is now '${index}'`);
+      console.log(`Current element is '${names[index]}'`)
+      index ++;
+    }
+  })
+})
