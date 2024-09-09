@@ -181,4 +181,14 @@ describe("loops does things over and over", () => {
     assert.equal(names.length, 3);
     assert.equal(newNames.length, 4);
   });
+  it("filter an array - mutable", () => {
+    const numbers = [10, 23, 1, 33, 8, 12]
+
+    for(let i = 0; i < numbers.length; i++){
+      if(numbers[i] > 10){
+        numbers.splice(i, 1)
+      }
+    }
+    assert.equal(numbers.length, 3)
+  })
 })
